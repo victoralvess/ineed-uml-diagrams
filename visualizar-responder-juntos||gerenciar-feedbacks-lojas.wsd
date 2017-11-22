@@ -1,0 +1,12 @@
+@startuml
+start
+    :Seleciona a loja;
+    :Exibe a lista de feedbacks;
+    :Seleciona o feedback;
+    if (Deseja reportar feedback ?) then (Sim)
+    :Envia o feedback aos administradores do site;
+    else
+    :Apenas visualiza;
+    endif
+stop
+@enduml
