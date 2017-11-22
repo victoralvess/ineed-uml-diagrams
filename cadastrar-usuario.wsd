@@ -1,0 +1,10 @@
+@startuml
+start
+    :Informar dados;
+    if (Dados válidos ?) then (Sim)
+    :Confirmar cadastro;
+    else
+    :Negar cadastro;
+    endif
+    stop
+@enduml

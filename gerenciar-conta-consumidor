@@ -1,0 +1,14 @@
+@startuml
+start
+:Selecionar ação;
+if (Excluir ?) then (Sim)
+    :Confirmar ação de exclusão;
+    if (Confirmou ?) then (Sim)
+    :Excluir conta;
+    endif
+    elseif (Atualizar ?) then (Sim)
+    :Alterar as informações desejadas;
+    :Salvar alterações;
+    endif
+    stop
+@enduml
