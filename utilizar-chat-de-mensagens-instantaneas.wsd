@@ -1,0 +1,7 @@
+@startuml
+start
+        :Selecionar sala de chat;
+        :Escrever a mensagem;
+        :Enviar a mensagem;
+        stop
+@enduml
