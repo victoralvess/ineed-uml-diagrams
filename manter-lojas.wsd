@@ -3,7 +3,7 @@ start
     :Carregar lista de lojas;
     :Escolher ação;
     if (Cadastrar ?) then (Sim)
-        :Preencher campos;
+        :Preencher campos de cadastro;
         elseif (Atualizar ?) then (Sim)
             :Preencher campos que deseja atualizar;
         elseif (Excluir ?) then (Sim)
