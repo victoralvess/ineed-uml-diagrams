@@ -1,7 +1,7 @@
 @startuml
 start
         :Informar email da conta;
-        if (Email cadastrado?) then (Sim)
+        if (Email cadastrado ?) then (Sim)
         :Enviar um email com instruções para mudança de senha;
         else
         stop

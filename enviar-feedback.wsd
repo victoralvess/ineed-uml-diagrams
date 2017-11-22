@@ -1,0 +1,14 @@
+@startuml
+start
+if (Feedback de produto ?) then (Sim)
+:Avaliar produto (gostei ou não gostei);
+elseif (Feedback de loja ?) then (Sim)
+:Escrever feedback;
+:Dar nota à loja;
+:Enviar feedback;
+else
+stop
+endif   
+     
+        stop
+@enduml

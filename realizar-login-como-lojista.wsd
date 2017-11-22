@@ -2,7 +2,7 @@
 start
     repeat 
         :Informar login e senha;
-        if (Esqueceu a senha? ) then (Sim)
+        if (Esqueceu a senha ?) then (Sim)
             :Enviar email de reconfiguração de senha;
             :Redefinir senha;            
         endif
