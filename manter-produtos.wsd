@@ -1,13 +1,13 @@
 @startuml
 start
-    :Carregar lista de lojas;
+    :Carregar lista de produtos;
     :Escolher ação;
     if (Cadastrar ?) then (Sim)
         :Preencher campos;
         elseif (Atualizar ?) then (Sim)
             :Preencher campos que deseja atualizar;
         elseif (Excluir ?) then (Sim)
-            :Selecionar a loja a ser removida;
+            :Selecionar o produto a ser removido;
         else (Não)
             stop
     endif
