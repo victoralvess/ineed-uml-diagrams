@@ -1,0 +1,17 @@
+@startuml
+start
+    :Carregar lista de lojas;
+    :Escolher ação;
+    if (Cadastrar ?) then (Sim)
+        :Preencher campos;
+        elseif (Atualizar ?) then (Sim)
+            :Preencher campos que deseja atualizar;
+        elseif (Excluir ?) then (Sim)
+            :Selecionar loja a ser removida;
+        else (Não)
+            stop
+    endif
+    :Validar informações alteradas;
+    :Salvar alterações;
+stop
+@enduml
