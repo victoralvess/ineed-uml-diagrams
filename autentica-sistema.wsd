@@ -1,0 +1,10 @@
+@startuml
+start
+    :Informar credenciais;
+    if (Dados válidos ?) then (Sim)
+    :Iniciar sessão;
+    else
+    :Negar acesso;
+    endif
+    stop
+@enduml
