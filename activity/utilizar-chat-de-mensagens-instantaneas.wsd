@@ -1,0 +1,9 @@
+@startuml
+start
+:Selecionar sala de chat;
+while (Tem mensagens para enviar ?) is (Sim)
+        :Escrever a mensagem;
+        :Enviar a mensagem;
+        endWhile (Não)
+        stop
+        @enduml

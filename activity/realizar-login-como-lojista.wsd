@@ -1,0 +1,16 @@
+@startuml
+start
+:Informar login e senha;
+if (Autenticação falhou ?) then (Sim)
+    if (Esqueceu a senha ?) then (Sim)
+        :Enviar email de reconfiguração de senha;
+        :Redefinir senha;
+        stop
+    else (Não)
+    :Exibir mensagem de erro;
+        stop
+    endif
+else (Não)
+:Iniciar sessão;
+stop
+@enduml

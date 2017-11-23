@@ -1,0 +1,12 @@
+@startuml
+start
+:Informar dados necessários;
+:Verificar informações;
+if (Informações verossímias ?) then (Sim)
+    :Confirmar cadastro;
+    stop
+else (Não)
+    :Negar pedido de cadastro;
+    stop
+endif
+@enduml

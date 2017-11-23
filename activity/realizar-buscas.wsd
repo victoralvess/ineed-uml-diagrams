@@ -1,0 +1,11 @@
+@startuml
+start
+:Inserir o texto de busca;
+:Realizar busca;
+if (Resultados encontrados ?) then (Sim)
+    :Mostrar a lista de resultados;
+    else (Não)
+    stop
+endif
+stop
+@enduml

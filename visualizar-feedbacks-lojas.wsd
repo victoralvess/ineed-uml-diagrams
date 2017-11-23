@@ -1,6 +1,0 @@
-@startuml
-start
-    :Seleciona a loja;
-    :Exibe a lista de feedbacks;
-stop
-@enduml
