@@ -1,0 +1,136 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class SignInScreen extends Activity {
+    - InputTextField loginField:
+    - InputPasswordField passwordField
+    - Text login
+    - Text password
+    - Button buttonSignInWithGoogle
+    - Button buttonSignUp
+    - Button buttonRecoverPassword
+    - void signInWithCredentials(Text login, Text password)
+    - void signInWithGoogle()
+    - void signUp()
+    - void recoverPassword()
+}
+
+class SignUpScreen extends Activity {
+    - InputTextField nameField:
+    - InputTextField loginField:
+    - InputPasswordField passwordField
+    - Text name
+    - Text login
+    - Text password
+    - Button buttonSignUp
+    - Button buttonSignIn
+    - void signUpWithGoogle()
+    - void signUp(Text name, Text login, Text password)
+    - void goToSignIn()
+}
+
+class SearchScreen extends Activity {
+    - InputTextField queryField
+    - Text query
+    - List results
+    - List search(Text query)
+}
+
+class StoreScreen extends Activity {
+    - Text storeId
+    - Text feedback
+    - Store storeData
+    - Store getStore(Text storeId)
+    - void sendFeedback(Text feedback)
+}
+
+class ProductScreen extends Activity {
+    - Text productId
+    - Product productData
+    - Product getProduct(Text productId)
+    - void upVote()
+    - void downVote()
+}
+
+class AccountManagementScreen extends Activity {
+    - Text uid
+    - User userData
+    - User getUser(Text uid)
+    - User updateAccountInfo(User updatedUserData)
+}
+
+class Database {
+    - {static} FirebaseConfiguration databaseConfiguration
+    + {static} Object openConnection(FirebaseConfiguration databaseCofiguration)
+    + {static} Object getData(Object params)
+    + {static} void insertData(Object data)
+    + {static} void updateData(Object data)
+    + {static} void deleteData(Text id)
+    + {static} Object signInWithGoogle()
+    + {static} Object signUpWithGoogle()
+    + {static} Object signUp(Text name. Text login, Text password)
+}
+
+class SearchAPI {
+    - Text query
+    + List queryData(Text query)
+}
+
+class Store {
+    - Array businessTimes
+    - Array categories
+    - Text cellphone
+    - Text phone
+    - Text cnpj
+    - Text color
+    - Text description
+    - Object feedbacks
+    - Object location
+    - Text name
+    - Array paymentWays
+    - Array pictures
+    - Text id
+}
+
+class Product {
+    - Array downVotes
+    - Array categories
+    - Integer downVotesCount
+    - Integer upVotesCount
+    - Text store
+    - Double price
+    - Text description
+    - Text name
+    - Array upVotes
+    - Array pictures
+    - Text id
+}
+
+class ChatScreen {
+    - Text store
+    - Text user
+    - Text message
+    - List messages
+    - void connectChat(store, user)
+    - List getMessages(store, user)
+    - void sendMessage(Text message)
+}
+
+class User {
+    - Text email
+    - Text name
+    - Text uid
+}
+
+SignInScreen "1" --> "1" Database : Autenticar-se >
+AccountManagementScreen "1" <.. "1" Database
+AccountManagementScreen "1" ..> "1" User
+SignUpScreen "0..1" --> "1" Database : Adicionar usuário >
+SearchScreen "1" --> "1" SearchAPI : Fazer buscas >
+StoreScreen "1" <..> "1" Store
+Store "1" <..> "1" Database
+Product "1" <..> "1" Database
+ProductScreen "1" <..> "1" Product
+ChatScreen "1" ..> "1" Store
+ChatScreen "1" ..> "1" User
+@enduml
