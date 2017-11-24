@@ -1,12 +1,11 @@
 @startuml
 start
-    :Informar credenciais;
-    if (Dados válidos ?) then (Sim)
-    :Iniciar sessão; 
-    :Redirecionar à tela principal; 
-    stop
-    else (Não)
+:Informar credenciais;
+if (Dados válidos ?) then (Sim)
+    :Iniciar sessão;
+    :Redirecionar à tela principal;
+else (Não)
     :Negar acesso;
-    stop
-    endif
+endif
+stop
 @enduml

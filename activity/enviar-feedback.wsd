@@ -2,16 +2,13 @@
 start
 if (Feedback de produto ?) then (Sim)
         :Avaliar produto (gostei ou não gostei);
-        stop
 else (Não)
         if (Feedback de loja ?) then (Sim)
                 :Escrever feedback;
                 :Dar nota à loja;
                 :Enviar feedback;
-
-                stop
         else (Não)
-                stop
         endif
 endif
+stop
 @enduml

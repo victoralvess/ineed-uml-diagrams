@@ -1,13 +1,12 @@
 @startuml
 start
-while (Cadastrar mais um usuário ?) is (Sim)
-   :Informar dados;
+while (Deseja cadastrar usuário ?) is (Sim)
+    :Informar dados;
     if (Dados válidos ?) then (Sim)
-    :Confirmar cadastro;
+        :Confirmar cadastro;
     else (Não)
-    :Negar cadastro;
-    stop
+        :Negar cadastro;
     endif
-endwhile (Não) 
-stop     
-@enduml
+    endwhile (Não)
+    stop
+    @enduml

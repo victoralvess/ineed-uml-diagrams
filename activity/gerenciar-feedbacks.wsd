@@ -7,20 +7,16 @@ if (Feedback de loja ?) then (Sim)
         :Selecionar o feedback;
         if (Reportar feedback ?) then (Sim)
             :Enviar o feedback aos administradores do site;
-            stop
         else (Não)
             :Visualizar;
-            stop
         endif
     else (Não)
-        stop
     endif
 else (Não)
     if (Feedback de produto ?) then (Sim)
         :Visualizar avaliações do produto;
-        stop
     else (Não)
-        stop
     endif
 endif
+stop
 @enduml

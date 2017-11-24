@@ -4,8 +4,7 @@ start
 :Realizar busca;
 if (Resultados encontrados ?) then (Sim)
     :Mostrar a lista de resultados;
-    else (Não)
-    stop
+else (Não)
 endif
 stop
 @enduml

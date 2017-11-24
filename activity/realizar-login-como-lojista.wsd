@@ -5,12 +5,11 @@ if (Autenticação falhou ?) then (Sim)
     if (Esqueceu a senha ?) then (Sim)
         :Enviar email de reconfiguração de senha;
         :Redefinir senha;
-        stop
     else (Não)
-    :Exibir mensagem de erro;
-        stop
+        :Exibir mensagem de erro;
     endif
 else (Não)
-:Iniciar sessão;
+    :Iniciar sessão;
+endif
 stop
 @enduml

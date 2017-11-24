@@ -7,24 +7,20 @@ if (Cadastrar ?) then (Sim)
     :Verificar informações;
     if (Informações válidas ?) then (Sim)
         :Confirmar cadastro;
-        stop
     else (Não)
-        stop
     endif
 else (Não)
     if (Atualizar ?) then (Sim)
         :Preencher campos que deseja atualizar;
         :Validar informações alteradas;
         :Salvar alterações;
-        stop
     else (Não)
         if (Excluir ?) then (Sim)
             :Selecionar o funcionário a ser removida;
             :Confirmar exclusão;
-            stop
         else (Não)
-            stop
         endif
     endif
 endif
+stop
 @enduml
