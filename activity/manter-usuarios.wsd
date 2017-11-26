@@ -16,7 +16,16 @@ else (Não)
         :Salvar alterações;
     else (Não)
         if (Excluir ?) then (Sim)
-            :Selecionar o funcionário a ser removida;
+            :Selecionar o funcionário a ser removido;
+            if (Excluir da loja ?) then (Sim)
+                :Desassociar funcionário da loja;
+            else (Não)
+                if (Excluir do sistema ?) then (Sim)
+                    :Remover funcionário do sitema;
+                else (Não)
+                stop
+                endif
+            endif
             :Confirmar exclusão;
         else (Não)
         endif
